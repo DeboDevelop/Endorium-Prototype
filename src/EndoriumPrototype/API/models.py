@@ -15,7 +15,7 @@ class AdminMap(models.Model):
     phrase = models.IntegerField()
 
     def __str__(self):
-        return self.room_id
+        return str(self.room_id)
 
 class Message(models.Model):
     message_id = models.AutoField(primary_key=True)
@@ -24,7 +24,7 @@ class Message(models.Model):
     No_of_upvote = models.IntegerField()
     
     def __str__(self):
-        return self.message_id
+        return str(self.message_id)
 
 class Upvote(models.Model):
     message_id = models.ManyToManyField(Message)
@@ -33,4 +33,4 @@ class Upvote(models.Model):
 
 
     def __str__(self):
-        return (self.user_id + " " + self.message_id)
+        return str(self.user_id + " " + self.message_id)
