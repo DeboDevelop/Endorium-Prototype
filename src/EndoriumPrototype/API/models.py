@@ -33,4 +33,4 @@ class Upvote(models.Model):
 
 
     def __str__(self):
-        return str(self.user_id + " " + self.message_id)
+        return str(str(self.user_id) + " " + str(self.message_id))
